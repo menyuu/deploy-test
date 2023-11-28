@@ -59,10 +59,20 @@ group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
 
+  gem 'capistrano', require: false # 追加
+  gem 'capistrano-rbenv', require: false # 追加
+  gem 'capistrano-rails', require: false # 追加
+  gem 'capistrano-bundler', require: false # 追加
+  gem 'capistrano-puma', require: false # 追加
+
 end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"
+end
+
+group :production do
+  gem 'pg'
 end
